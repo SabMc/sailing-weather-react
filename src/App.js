@@ -4,14 +4,16 @@ function App() {
   return (
     <div className="App">
       <p>Weather app for sailing</p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open-source code by Sabrina McEwan
-      </a>
+      <footer>
+        <a
+          className="App-link"
+          href="https://github.com/SabMc/sailing-weather-react"
+          target="_blank"
+        >
+          Open-source code
+        </a>{" "}
+        by Sabrina McEwan
+      </footer>
     </div>
   );
 }
