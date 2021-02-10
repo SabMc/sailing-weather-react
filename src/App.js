@@ -1,10 +1,13 @@
+import React from "react";
+import Weather from "./Weather";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <p>Weather app for sailing</p>
+        <h1>Sailing Weather App</h1>
+        <Weather />
         <footer>
           <a
             className="App-link"
@@ -19,5 +22,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
