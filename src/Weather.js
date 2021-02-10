@@ -12,6 +12,7 @@ export default function Weather() {
                 type="search"
                 className="form-control"
                 placeholder="Sailing Destination"
+                autoFocus="on"
               />
             </div>
             <div className="col-3">
@@ -28,7 +29,8 @@ export default function Weather() {
       <div className="row">
         <div className="col-4">
           <ul>
-            <li>Wednesday | 10 Feb</li>
+            <li>Wednesday</li>
+            <li>10 Feb 2021 </li>
             <li>09:48</li>
           </ul>
         </div>
@@ -43,9 +45,9 @@ export default function Weather() {
           </ul>
         </div>
       </div>
-      <h3>Beaufort 3 Gentle Breeze</h3>
-      <div className="row">
-        <div className="col-6">
+      <h3>Beaufort 3: Gentle Breeze</h3>
+      <div className="row justify-content-center">
+        <div className="col-4">
           <ul>
             <li>Wind 12 knots</li>
             <li>Gust 25 knots</li>
