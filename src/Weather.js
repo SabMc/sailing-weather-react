@@ -7,15 +7,14 @@ export default function Weather() {
   const [loaded, setLoaded] = useState(false);
   const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
-    console.log(response.data.main.humidity);
     setWeatherData({
       city: response.data.name,
       temperatureMax: response.data.main.temp_max,
       temperatureMin: response.data.main.temp_min,
-      humidity: response.data.main.humditiy,
+      humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
-      gust: response.data.wind.gust,
+
       visibility: response.data.visibility,
     });
     setLoaded(true);
@@ -58,7 +57,7 @@ export default function Weather() {
               icon="WIND"
               color="#7D5F41"
               size={80}
-              animate={true}
+              animate={false}
             />
           </div>
           <div className="col-4">
@@ -77,7 +76,7 @@ export default function Weather() {
           <div className="col-6">
             <ul>
               <li>Wind {Math.round(weatherData.wind * 1.94384449)} knots</li>
-              <li>Gust {Math.round(weatherData.wind * 1.94384449)} knots</li>
+
               <li>SSE</li>
               <li>Visibility {Math.round(weatherData.visibility / 1000)} km</li>
             </ul>
