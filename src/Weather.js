@@ -1,4 +1,5 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.css";
 
 export default function Weather() {
@@ -35,7 +36,12 @@ export default function Weather() {
           </ul>
         </div>
         <div className="col-4">
-          <img src="./Sun1.png" />
+          <ReactAnimatedWeather
+            icon="WIND"
+            color="#7D5F41"
+            size={100}
+            animate={true}
+          />
         </div>
         <div className="col-4">
           <ul>
