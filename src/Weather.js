@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 //import ReactAnimatedWeather from "react-animated-weather";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -9,9 +10,7 @@ export default function Weather(props) {
     setWeatherData({
       loaded: true,
       city: response.data.name,
-      day: "Wednesday",
-      date: "12 Feb 2021",
-      time: "10:13",
+      date: new Date(response.data.dt * 1000),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       temp: response.data.main.temp,
       temperatureMax: response.data.main.temp_max,
@@ -52,11 +51,7 @@ export default function Weather(props) {
         </h2>
         <div className="row">
           <div className="col-4">
-            <ul>
-              <li>{weatherData.day}</li>
-              <li>{weatherData.date}</li>
-              <li>{weatherData.time}</li>
-            </ul>
+            <FormattedDate date={weatherData.date} />
           </div>
           <div className="col-4">
             <img src={weatherData.icon} alt={weatherData.description} />
