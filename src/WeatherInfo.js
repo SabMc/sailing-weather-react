@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Beaufort from "./Beaufort";
 
 export default function WeatherInfo(props) {
   return (
@@ -30,7 +31,9 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <ul>
             <li>
-              <h3>Beaufort 3: Gentle Breeze</h3>
+              <h3>
+                <Beaufort beaufort={props.data.wind} />
+              </h3>
             </li>
             <li>Wind {Math.round(props.data.wind * 1.94384449)} knots</li>
             <li className="text-capitalize">{props.data.description}</li>
