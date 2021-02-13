@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 //import ReactAnimatedWeather from "react-animated-weather";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -46,40 +47,7 @@ export default function Weather(props) {
             </div>
           </form>
         </div>
-        <h2>
-          {Math.round(weatherData.temp)}°C in {weatherData.city}
-        </h2>
-        <div className="row">
-          <div className="col-4">
-            <FormattedDate date={weatherData.date} />
-          </div>
-          <div className="col-4">
-            <img src={weatherData.icon} alt={weatherData.description} />
-          </div>
-          <div className="col-4">
-            <ul>
-              <li>
-                {Math.round(weatherData.temperatureMax)}° |{" "}
-                {Math.round(weatherData.temperatureMin)}° C
-              </li>
-              <li>Humidity {weatherData.humidity}%</li>
-              <li>{weatherData.pressure} hPa</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="row justify-content-center">
-          <div className="col-6">
-            <ul>
-              <li>
-                <h3>Beaufort 3: Gentle Breeze</h3>
-              </li>
-              <li>Wind {Math.round(weatherData.wind * 1.94384449)} knots</li>
-              <li className="text-capitalize">{weatherData.description}</li>
-              <li>Visibility {Math.round(weatherData.visibility / 1000)} km</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
