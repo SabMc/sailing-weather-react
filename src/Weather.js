@@ -21,6 +21,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
+      windDeg: response.data.wind.deg,
       description: response.data.weather[0].description,
       visibility: response.data.visibility,
     });

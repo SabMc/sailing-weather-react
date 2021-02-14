@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import Beaufort from "./Beaufort";
+import WindDirection from "./WindDirection";
 
 export default function WeatherInfo(props) {
   return (
@@ -36,6 +37,9 @@ export default function WeatherInfo(props) {
               </h3>
             </li>
             <li>Wind {Math.round(props.data.wind * 1.94384449)} knots</li>
+            <li>
+              <WindDirection degree={props.data.windDeg} />
+            </li>
             <li className="text-capitalize">{props.data.description}</li>
             <li>Visibility {Math.round(props.data.visibility / 1000)} km</li>
           </ul>

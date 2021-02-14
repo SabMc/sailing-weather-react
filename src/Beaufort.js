@@ -6,31 +6,31 @@ export default function Beaufort(props) {
   return (
     <div className="Beaufort">
       {bfNr < 2
-        ? "Beaufort 0 Calm"
+        ? "Bft 0: Calm"
         : bfNr < 6
-        ? "Beaufort 1 Light Air"
+        ? "Bft 1: Light Air"
         : bfNr < 12
-        ? "Beaufort 2 Light Breeze"
+        ? "Bft 2: Light Breeze"
         : bfNr < 20
-        ? "Beaufort 3 Gentle Breeze"
+        ? "Bft 3: Gentle Breeze"
         : bfNr < 29
-        ? "Beaufort 4 Moderate Breeze"
+        ? "Bft 4: Moderate Breeze"
         : bfNr < 39
-        ? "Beaufort 5 Fresh Breeze"
+        ? "Bft 5: Fresh Breeze"
         : bfNr < 50
-        ? "Beaufort 6 Strong Breeze"
+        ? "Bft 6: Strong Breeze"
         : bfNr < 62
-        ? "Beaufort 7 Moderate Gale"
+        ? "Bft 7: Moderate Gale"
         : bfNr < 75
-        ? "Beaufort 8 Gale"
+        ? "Bft 8: Gale"
         : bfNr < 89
-        ? "Beaufort 9 Strong Gale"
+        ? "Bft 9: Strong Gale"
         : bfNr < 103
-        ? "Beaufort 10 Storm"
+        ? "Bft 10: Storm"
         : bfNr < 118
-        ? "Beaufort 11 Violent Storm"
+        ? "Bft 11: Violent Storm"
         : bfNr >= 118
-        ? "Beaufort 12 Hurricane"
+        ? "Bft 12: Hurricane"
         : ""}
     </div>
   );
