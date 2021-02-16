@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import Beaufort from "./Beaufort";
 import WindDirection from "./WindDirection";
 import TemperatureConversion from "./TemperatureConversion";
@@ -16,7 +17,7 @@ export default function WeatherInfo(props) {
           <FormattedDate date={props.data.date} />
         </div>
         <div className="col-4">
-          <img src={props.data.icon} alt={props.data.description} />
+          <WeatherIcon code={props.data.icon} alt={props.data.description} />
         </div>
         <div className="col-4">
           <ul>

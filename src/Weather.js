@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-//import ReactAnimatedWeather from "react-animated-weather";
 import WeatherInfo from "./WeatherInfo";
 
 import "./Weather.css";
@@ -14,7 +13,7 @@ export default function Weather(props) {
       loaded: true,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       temp: response.data.main.temp,
       temperatureMax: response.data.main.temp_max,
       temperatureMin: response.data.main.temp_min,
