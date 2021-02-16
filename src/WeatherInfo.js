@@ -2,12 +2,14 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import Beaufort from "./Beaufort";
 import WindDirection from "./WindDirection";
+import TemperatureConversion from "./TemperatureConversion";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h2>
-        {Math.round(props.data.temp)}°C in {props.data.city}
+        <TemperatureConversion celsius={props.data.temp} />
+        in {props.data.city}
       </h2>
       <div className="row">
         <div className="col-4">
