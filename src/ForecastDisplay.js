@@ -14,11 +14,18 @@ export default function ForecastDisplay(props) {
     return `${temperature}°C`;
   }
 
+  function windSpeed() {
+    let windSpeed = Math.round(props.data.wind.speed * 1.94384449);
+    return `${windSpeed} knots`;
+  }
+
   return (
     <div className="ForecastDisplay col">
       {hours()}
       <WeatherIcon code={props.data.weather[0].icon} />
       {temperature()}
+      <br />
+      {windSpeed()}
     </div>
   );
 }
