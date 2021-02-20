@@ -1,6 +1,7 @@
 import React from "react";
 
 import WeatherIcon from "./WeatherIcon";
+import WindDirection from "./WindDirection";
 
 export default function ForecastDisplay(props) {
   function hours() {
@@ -26,6 +27,7 @@ export default function ForecastDisplay(props) {
       {temperature()}
       <br />
       {windSpeed()}
+      <WindDirection degree={props.data.wind.deg} />
     </div>
   );
 }
